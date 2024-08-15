@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useColorMode} from '@docusaurus/theme-common';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
@@ -16,7 +17,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img className={clsx(styles.heroBannerLogo)} src={colorMode === 'dark' ? '/img/swgpu-dark.png' : '/img/swgpu.png'}/>
+        <img className={clsx(styles.heroBannerLogo)} src={colorMode === 'dark' ? useBaseUrl('/img/swgpu-dark.png') : useBaseUrl('/img/swgpu.png')}/>
       </div>
     </header>
   );
